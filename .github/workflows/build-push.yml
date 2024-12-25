@@ -1,14 +1,10 @@
----
 name: Build and push docker images
 
 env:
   DOCKERHUB_REPOSITORY: traccar/traccar
 
 on:
-  push:
-    branches:
-      - master
-      - v[0-9]+.[0-9]+
+  workflow_dispatch:
 
 defaults:
   run:
