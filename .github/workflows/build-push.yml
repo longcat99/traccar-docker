@@ -39,6 +39,7 @@ jobs:
             echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:latest,$DOCKERHUB_REPOSITORY:${{ matrix.os }}" >> $GITHUB_ENV
           else
             echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:${{ matrix.os }}" >> $GITHUB_ENV
+          fi
 
       - name: Set environment DOCKERHUB_IMAGE_PLATFORMS
         run: |
